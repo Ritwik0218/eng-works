@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Chair Company</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-Ho3RwsRlkRN6bIsJ+et/e06Uv5I+ZWbf5++0t+vErp3HbgvY0s1j0KOS7na2R5iG8pPtJ32bOzzV6v1NB6N0/w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Company Logo">
+                <div class="social-icon">
+                    <a href="https://www.facebook.com/reel/500506472350024" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hanumantlal393?igsh=Y3o1M2Fzcjl6NHkw" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/+918929650569" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="menubar">
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="about-us">
+        <h1>ABOUT US</h1>
+        <div class="animated-background">
+            <div class="content">
+                <h2>WHAT WE DO</h2>
+                <p>The Hanumant Dental Chair is a state-of-the-art dental equipment piece designed to enhance both patient comfort and practitioner efficiency. This under-hanging model is a blend of innovative technology and ergonomic design, tailored to meet the demanding needs of modern dental practices.</p>
+            </div>
+        </div>
+    </section>
+    </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section address">
+                <h2>Address</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Address: B-117 partap vihar <br> khora calony ghaziabad up
+                    201014 <br></p>
+                <p><i class="fas fa-phone-alt"></i> Phone: 8929650569, 9990481163</p>
+                <p><i class="fas fa-envelope"> hanumantlalengineeringworks@gmail.com</i></p>
+            </div>
+            <div class="footer-section social">
+                <h3>Social Connect</h3>
+                <div class="footer-section social-media">
+                    <a href="https://www.facebook.com/reel/500506472350024" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hanumantlal393?igsh=Y3o1M2Fzcjl6NHkw" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/+918929650569" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 All Rights Reserved by Hanumant Lal Engineering Works |<br>DESIGNED BY: RITWIK MATHUR</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-GbpeIlYpZ04G/cUoPO1zHqgR0OzWtki9DCJn46myxt8flHRtVduI9uDxNmRt+j/9tx63QCBNxXgjBdzUJULbcg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+        integrity="sha512-uklqlLLm0+Zp6nJK9j0bwk11D2/YqIVLxL+IRyKytxCnJ7xfdo8ePhpmjDFd9nPHzWZV45Xs4jyBzbl84ZoFTg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init();
+
+        // Three.js for 3D Visuals
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('heroCanvas'), alpha: true});
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        // document.body.appendChild(renderer.domElement); // This line is not necessary as the canvas is already in the HTML
+
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
+        const cube = new THREE.Mesh(geometry, material);
+
+        scene.add(cube);
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+</body>
+
+</html>
