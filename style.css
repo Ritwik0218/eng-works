@@ -1152,13 +1152,7 @@ footer {
     margin: 0;
     font-size: 0.8em;
 }
-footer span a{
-    color: crimson;
-    text-decoration: none;
-}
-footer span a:hover{
-    text-decoration: none;
-}
+
 /* Desktop Layout */
 @media (min-width: 769px) {
     .footer-container {
@@ -1217,6 +1211,35 @@ footer span a:hover{
 
     .footer-section .social-media a {
         font-size: 1.1em;
+    }
+}
+.footer-info {
+    text-align: center; /* Center align the text */
+    margin: 20px auto; /* Center align the container */
+    font-size: 16px; /* Default font size */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.footer-info span {
+    display: block; /* Make each span take full width */
+    margin-bottom: 10px; /* Space between spans */
+}
+
+.footer-info a {
+    text-decoration: none; /* Remove underline from links */
+    color: #0693E3; /* Default color for links */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.footer-info a:hover {
+    color: #ff6600; /* Change color on hover */
+    transform: translateY(-5px); /* Move link up on hover */
+}
+
+/* Responsive font size */
+@media (max-width: 768px) {
+    .footer-info {
+        font-size: 14px; /* Decrease font size on smaller screens */
     }
 }
 
