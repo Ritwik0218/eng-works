@@ -1152,7 +1152,13 @@ footer {
     margin: 0;
     font-size: 0.8em;
 }
-
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: none;
+}
 /* Desktop Layout */
 @media (min-width: 769px) {
     .footer-container {
